@@ -1,0 +1,18 @@
+<script>
+    function checkifodd(num){
+        remainder = num%2
+        if(remainder==0){
+            return false
+        }
+        else{
+            return true
+        }
+    }
+    var num = +prompt("Enter a number: ")
+    if(checkifodd(num)){
+        alert("Your number is odd")
+    }
+    else{
+        alert("Your number is even.")
+    }
+</script>
