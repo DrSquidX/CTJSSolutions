@@ -1,0 +1,34 @@
+<script>
+    // Unoptimized code.
+    function fahrentocel(temp){
+        return (temp-32)*(5/9)
+    }
+    function celtofahren(temp){
+        return (temp*9/5)+32
+    }
+    var temp = +prompt("Enter your temperature: ")
+    var operation = prompt("Here is a list of operations you can do.\nFC. Fahren to Cel\nCF. Cel to Fahren\nPick your operation(enter the letter assigned to the operation): ")
+    var answer = 0
+    var answer2 = 0
+    var displayboth = false
+    var _operation = ""
+    if(operation=="fc" || operation=="FC"){
+        answer = fahrentocel(temp)
+        _operation = "Fahrenheight to Celcius"
+    }
+    else if(operation=="cf" || operation=="CF"){
+        answer = celtofahren(temp)
+        _operation = "Celcius to Fahrenheight"
+    }
+    else{
+        answer - fahrentocel(temp)
+        answer2 = celtofahren(temp)
+        displayboth = true
+    }
+    if(displayboth){
+        alert("Since you did enter a valid input, both operations have been chosen.\nFahrenhieight to Celcius: "+answer+"\nCelcius to Fahrenheight: "+answer2)
+    }
+    else{
+        alert(temp+ " from "+_operation+" is: "+answer)
+    }
+</script>

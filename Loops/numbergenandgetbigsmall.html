@@ -1,0 +1,14 @@
+<script>
+function randInt(min, max){
+    return Math.floor(Math.random()*(max-min)+min);
+}
+let numlist = []
+var repeats = +prompt("How many numbers do you want to generate: ")
+for(var i=1; i<=repeats;i+=1){
+    numlist.push(randInt(1,100));
+}
+alert("Numbers generated "+numlist)
+numlist.sort((a,b) => a-b)
+alert("Smallest number generated: "+numlist[0])
+alert("Largest number generated: "+numlist[numlist.length-1])
+</script>

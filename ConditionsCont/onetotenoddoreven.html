@@ -1,0 +1,14 @@
+<script>
+    function randInt(min, max){
+        return Math.floor(Math.random()*(max-min)+min)+1
+    }
+    var num = randInt(1,10)
+    var typeonumber = "NaN"
+    if(num%2==0){
+        typeonumber = "even"
+    }
+    else{
+        typeonumber = "odd"
+    }
+    alert("The number rolled("+num+") is an "+typeonumber+" number.")
+</script>

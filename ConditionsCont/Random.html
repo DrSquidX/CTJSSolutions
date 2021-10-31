@@ -1,0 +1,16 @@
+<script>
+    // An explanation of the function:
+    // There are 2 parameters for the maximum and minumum numbers for the
+    // user to provide. Because of PEMDAS, the interpreter would first
+    // do the calculations of the function inside of the Math.floor()
+    // before doing the Math.floor. Math.random() generates a random
+    // number between 0 and 1(will be some wac decimal), where it will
+    // then be multiplied the by the (max-min), using the parameters 
+    // provided to do so, and then after doing so, the min is added
+    // to the value, where the Math.floor() turns the value into
+    // an integer.
+    function randInt(min, max){
+        return Math.floor(Math.random()*(max-min)+min)+1
+    }
+    alert(randInt(10,100))
+</script>

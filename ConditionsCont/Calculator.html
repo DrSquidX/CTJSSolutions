@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<title>Calculator</title>
+<head></head>
+<script>
+    // Calculation Functions
+    function add(num1, num2) {
+    return num1 + num2
+    }
+    function multiply(num1, num2) {
+    return num1 * num2
+    }
+    function subtract(num1, num2) {
+    return num1 - num2
+    }
+    function divide(num1, num2) {
+    return num1 / num2
+    }
+    // Prompts for numbers and operation selection
+    var num1 = Number(prompt("Enter a number: "))
+    var num2 = Number(prompt("Enter another number: "))
+    var operation = Number(prompt("1 - Add\n2 - Subtract\n3 - Multiply\n4 - Divide\nEnter an operation(a number):"))
+    var answer = 0
+    var sign = ""
+    // If statments for choosing operations and doing them
+    if (operation === 1){
+        answer = add(num1, num2)
+        sign = "+"
+    }
+    else if (operation === 2){
+        answer = subtract(num1, num2)
+        sign = "-"
+    }
+    else if (operation === 3){
+        answer = multiply(num1, num2)
+        sign = "*"
+    }
+    else if (operation === 4) {
+        answer = divide(num1, num2)
+        sign = "/"
+    }
+    else{
+        alert("Invalid Input. Setting the Operation to Addition.")
+        sign = "+"
+        answer = add(num1, num2)
+    }
+    // Outputs the answer
+    document.write("The answer of "+num1+" "+sign+" "+num2+" is: ",answer)
+    </script>
+<body>
+</body>

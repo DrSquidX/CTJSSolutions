@@ -1,0 +1,30 @@
+<script>
+    var grade = Math.floor(Math.random()*(100-1)+1)+1
+    alert("Grade: "+grade)
+    var lettergrade = ""
+    if(grade>=100){
+        grade = 100
+    }
+    else if(grade<0){
+        grade = 1
+    }
+    if(grade>=90){
+        lettergrade = "A"
+    }
+    else if(grade >=80){
+        lettergrade = "B"
+    }
+    else if(grade>=70){
+        lettergrade = "C"
+    }
+    else if(grade>=50){
+        lettergrade = "D"
+    }
+    else{
+        lettergrade = "F"
+    }
+    alert("Grade is an "+lettergrade)
+    if(grade == 69){
+        alert("Thats a pretty nice grade, but you need to do better.")
+    }
+</script>

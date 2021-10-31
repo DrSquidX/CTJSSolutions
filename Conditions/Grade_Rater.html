@@ -1,0 +1,18 @@
+<script>
+    function average_calc(num1, num2, num3){
+        return (grade1+grade2+grade3) / 3
+    }
+    var grade1 = +prompt("Enter a grade: ")
+    var grade2 = +prompt("Enter a grade: ")
+    var grade3 = +prompt("Enter a grade: ")
+    var average = average_calc(grade1, grade2, grade3)
+    if(average < 90){
+        alert("Bad Grade.")
+    }
+    else if(average >= 90){
+        alert("Good Grade.")
+    }
+    else{
+        alert("How did you get here?")
+    }
+    </script>

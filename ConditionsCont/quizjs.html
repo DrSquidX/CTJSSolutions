@@ -1,0 +1,22 @@
+
+
+<script>
+// Fomula for the calculations
+function formula(month, day, year){
+    return (Math.pow(day, 2)+Math.pow(month,2))/year
+}
+// Inputs
+var month = +prompt("Enter month of birth")
+var day = +prompt("Enter day of birth")
+var year = +prompt("Enter year of birth")
+// Obtaining the number
+var number = formula(month, day, year)
+var NewStr = ""
+// Almost always the number will be less than 10
+if(number < 10){
+    NewStr = "The new "
+    alert("Original Magic Number: "+number)
+    number *= 10
+}
+alert(NewStr+"Magic Number is "+number)
+</script>

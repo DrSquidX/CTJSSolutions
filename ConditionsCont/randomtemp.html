@@ -1,0 +1,27 @@
+<script>
+    function randInt(min, max){
+        return Math.floor(Math.random()*(max-min)+min)+1
+    }
+    function gen_range(min, max){
+        var ls = []
+        ls.push(min)
+        for(var i = min+1; i <= max; i++){
+            ls.push(i)
+        }
+        return ls
+    }
+    var temp = randInt(1,100)
+    alert("The temperature is: "+temp)
+    if(gen_range(1,29).includes(temp)){
+        alert("Wear a coat!")
+    }
+    else if(gen_range(30,70).includes(temp)){
+        alert("Wear a Sweater!")
+    }
+    else if(gen_range(71,85).includes(temp)){
+        alert("Wear shorts!")
+    }
+    else if(gen_range(86,100).includes(temp)){
+        alert("Go to the beach!")
+    }
+</script>

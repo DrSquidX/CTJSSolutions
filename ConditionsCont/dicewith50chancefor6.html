@@ -1,0 +1,14 @@
+<script>
+    function randInt(min, max){
+        return Math.floor(Math.random()*(max-min)+min)+1
+    }
+    var fiftychance = randInt(1,2)
+    var roll = 1
+    if(fiftychance==1){
+        roll = 6
+    }
+    else{
+        roll = randInt(1,6)
+    }
+    alert("The dice has rolled on: "+roll)
+</script>

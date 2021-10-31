@@ -1,0 +1,43 @@
+<script>
+    // Explanation of the function:
+    // The maximum and minimum ranges are specified, where a list is created.
+    // The list appends the minimum parameter into itself, where a for
+    // loop happends. This would append numbers consecutively, until the
+    // maximum value is reached. The list is then returned and the function
+    // is finished.
+    function gen_range(min, max){
+        var ls = []
+        ls.push(min)
+        for(var i = min+1; i <= max; i++){
+            ls.push(i)
+        }
+        return ls
+    }
+    var grade = +prompt("Enter the grade: ")
+    var lettergrade = ""
+    if(grade>100){
+        grade = 100
+    }
+    else if(grade<0){
+        grade = 1
+    }
+    if(gen_range(90,100).includes(grade)){
+        lettergrade = "A"
+    }
+    else if(gen_range(80,89).includes(grade)){
+        lettergrade = "B"
+    }
+    else if(gen_range(70,79).includes(grade)){
+        lettergrade = "C"
+    }
+    else if(gen_range(60,69).includes(grade)){
+        lettergrade = "D"
+    }
+    else{
+        lettergrade = "F"
+    }
+    alert("Grade is an "+lettergrade)
+    if(grade == 69){
+        alert("Thats a pretty nice grade, but you need to do better.")
+    }
+</script>

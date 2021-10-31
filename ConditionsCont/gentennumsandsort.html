@@ -1,0 +1,19 @@
+<script>
+    // Both the sorting and the random number generation are in this script.
+    function randInt(min, max){
+        return Math.floor(Math.random()*(max-min)+min)+1
+    }
+    var added_numbers = 0
+    var min = +prompt("Enter the minimum num: ")
+    var max = +prompt("Enter the maximum num: ")
+    var num_list = []
+    var item = 0
+    for(var i = 0; i < 10; i++){
+        rn = randInt(min,max)
+        num_list.push(rn)
+        added_numbers += rn
+    }
+    alert("The numbers generated have been sorted: "+num_list.sort((a,b) => a-b))
+    alert("The largest number in the list: "+num_list[num_list.length-1])
+    alert("All numbers added together: "+added_numbers)//gamer
+</script>

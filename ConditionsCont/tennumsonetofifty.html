@@ -1,0 +1,22 @@
+<script>
+    function randInt(min, max){
+        return Math.floor(Math.random()*(max-min)+min)
+    }
+    var num_list = []
+    var item = 0
+    // Here's an explanation on the for loop conditions below. It first makes a small variable in it(called 'i'), 
+    // where the semi colon would separate each part of the condition, sort of acting like the separator between 
+    // different lines of code. The first part defines the varaiable(making it '0'), where the second part is
+    // the condition for the loop to actually take place(it will continue as long as var 'i' is smaller than 10).
+    // The third part is just that variable 'i' will add 1 to itself every time the loop loops. This would allow
+    // the loop to run only 10 times, as the condition specifies so.
+    for(var i = 0; i < 10; i++){
+        num_list.push(randInt(1,50))
+    }
+    alert(num_list)
+    var new_num = 0
+    for(var i = 0; i < num_list.length; i++){
+        new_num += num_list[i]
+    }
+    alert("The sum of all the numbers in list ["+num_list+"] is "+new_num)
+</script>

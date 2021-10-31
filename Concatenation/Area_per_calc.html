@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<title></title>
+<head>
+
+</head>
+<body>
+<script>
+    area_calc = function(length, width){
+        return length * width
+    }
+    per_calc = function(length, width){
+        return (length + width) * 2
+    }
+    var length = +prompt("Enter your length: ")
+    var width = +prompt("Enter your width: ")
+    var operation = +prompt("1. Area\n2. Perimeter\n3. Both\nWhich operation(Choose a number)?: ")
+    var answer = 0
+    var answer2 = 0
+    var both = false
+    var operation_ = ""
+    if(operation===1){
+        answer = area_calc(length, width)
+        operation_ = "Area"
+    }
+    else if(operation ===2){
+        answer = per_calc(length, width)
+        operation_ = "Perimeter"
+    }
+    else if(operation === 3){
+        answer = area_calc(length, width)
+        answer2 = per_calc(length, width)
+        both = true
+    }
+    if(both === false){
+        document.write("The "+operation_+" of length "+length+" and width "+width+" is: "+answer)
+    }
+    else{
+        document.write("The area and perimeter of rectangle with lengths and widths "+length+" and "+width+" is "+answer+" and "+answer2)
+    }
+</script>
+</body>
