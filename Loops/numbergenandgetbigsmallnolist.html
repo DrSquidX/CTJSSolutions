@@ -1,0 +1,23 @@
+<script>
+    function randInt(min, max){
+        return Math.floor(Math.random()*(max-min)+min);
+    }
+    var repeats = +prompt("How many numbers do you want to generate: ")
+    var newnum = 0
+    var nums = ""
+    var bignum = 1
+    var smallnum = 100
+    for(var i=1; i<=repeats;i+=1){
+        newnum = randInt(1,100)
+        nums = nums + ","+newnum
+        if(newnum > bignum){
+            bignum = newnum
+        }
+        else if(smallnum>newnum){
+            smallnum = newnum
+        }
+    }
+    alert("Numbers Generated: "+nums)
+    alert("Smallest number generated: "+smallnum)
+    alert("Largest number generated: "+bignum)
+    </script>
