@@ -1,0 +1,30 @@
+<script>
+    var reps = +prompt("Enter the amount of *'s you want: ")
+    var num = reps
+    var display = ""
+    var spaces = reps
+    let output = []
+    function genspaces(num){
+        var space = ""
+        for(i=1;i<=num;i+=1){
+            space += "_"
+        }
+        return space
+    }
+    while(num>=0){
+        var string = genspaces(spaces)
+        for(var i=1; i<=num;i+=1){
+            string += "*"
+        }
+        string += "<br>"
+        display = string
+        output.push(display)
+        //document.write(display)
+        num -= 2
+        spaces +=1
+    }
+    output.reverse()
+    for(var i=0; i<=output.length-1;i++){
+        document.write(output[i])
+    }
+</script>

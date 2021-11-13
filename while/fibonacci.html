@@ -1,0 +1,15 @@
+<script>
+    var maxnum = +prompt("Enter max fibonacci num: ")
+    var firstnum = 1
+    var secondnum = 1
+    var sum = 0
+    var calcs = 1
+    while(sum<=maxnum){
+        sum = firstnum + secondnum
+        document.write("<br>Calculation #"+calcs+": "+firstnum+" + "+secondnum+" = "+sum)
+        firstnum = secondnum
+        secondnum = sum
+        calcs += 1
+    }
+    alert("maximum fibonacci num from the specified maximum: "+sum)
+</script>

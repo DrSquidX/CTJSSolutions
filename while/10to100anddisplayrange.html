@@ -1,0 +1,15 @@
+<script>
+    function randInt(max, min){
+        return Math.floor(Math.random()*(max-min)+min)+1
+    }
+    let numlist = []
+    var num = 1
+    while(num <=10){
+        numlist.push(randInt(10,100))
+        num += 1
+    }
+    numlist.sort((a,b)=>(a-b))
+    alert("Numbers generated: "+numlist)
+    range = (numlist[numlist.length-1]-numlist[0])
+    alert("Range: "+range)
+</script>

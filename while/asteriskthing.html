@@ -1,0 +1,15 @@
+
+
+<script>
+    var reps = +prompt("Enter the amount of *'s you want: ")
+    var num = 1
+    while(num<=reps){
+        var string = ""
+        for(var i=1; i<=num;i+=1){
+            string += "*"
+        }
+        string += "<br>"
+        document.write(string)
+        num += 1
+    }
+</script>
