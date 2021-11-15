@@ -7,7 +7,7 @@
     function genspaces(num){
         var space = ""
         for(i=1;i<=num;i+=1){
-            space += "_"
+            space += "&nbsp;&nbsp;"
         }
         return space
     }
@@ -19,12 +19,13 @@
         string += "<br>"
         display = string
         output.push(display)
-        //document.write(display)
         num -= 2
         spaces +=1
     }
-    output.reverse()
-    for(var i=0; i<=output.length-1;i++){
-        document.write(output[i])
+    for(var i=1; i<=2; i+=1){
+        output.reverse()
+        for(var ii=0; ii<=output.length-1;ii++){
+            document.write(output[ii])
+        }
     }
 </script>
