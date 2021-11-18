@@ -1,0 +1,24 @@
+<script>
+    function displayevennums(max){
+        let numlist = []
+        for(i=0;i<=max;i+=2){
+            numlist.push(i)
+        }
+        alert(numlist)
+    }
+    function personalizedmsg(){
+        var name = prompt("What is your name?")
+        var grade = +prompt("What is your grade?")
+        var personalname = "billy"
+        if(name.toLowerCase() == personalname && grade == 9){
+            alert("Good Morning "+name+" and you are in grade "+grade+"!")
+        }
+        else{
+            alert("Grade: "+grade+" Name: "+grade)
+        }
+    }
+</script>
+<form name="">
+    <input type="button" value="Even Nums 1-10" onclick="displayevennums(10)"> 
+    <input type="button" value="Click Me" onclick="personalizedmsg()">
+</form>

@@ -1,0 +1,26 @@
+<script>
+
+function display(){
+    var choices = "You have picked: "
+    if(document.myform.red.checked){
+        choices = choices+" "+document.myform.red.value
+    }
+    if(document.myform.blue.checked){
+        choices = choices+" "+document.myform.blue.value
+    }
+    if(document.myform.green.checked){
+        choices = choices+" "+document.myform.green.value
+    }
+    document.myform.out.value=choices
+}
+
+</script>
+
+<form name="myform">
+<input type="checkbox" value="red" name="red">Red
+<input type="checkbox" value="blue" name="blue">blue
+<input type="checkbox" value="green" name="green">Green
+<input type="button" value="Click" onclick="display()">
+<input type="output" value="Output" name="out">
+
+</form>

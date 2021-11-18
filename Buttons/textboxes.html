@@ -1,0 +1,17 @@
+<script>
+function test(){
+    document.myform.area.value = "Hello There "+document.myform.Firstname.value+" "+document.myform.Lastname.value+" and you are in grade "+document.myform.grade.value+"!"
+}
+</script>
+<form name="myform">
+First Name:
+<input type="text" value="" name="Firstname">
+Last name:
+<input type="text" value="" name="Lastname">
+Grade: 
+<input type="text" value="" name="grade">
+<input type="button" value="clickhere" name="button" onclick="test()" >
+<br>Summary Of Your Info:<br><textarea name="area">
+Output
+</textarea>
+</form>

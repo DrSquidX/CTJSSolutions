@@ -1,0 +1,39 @@
+<script>
+function courseselect(){
+    var packet = "Your name: "+document.courses.name.value+"\nClasses Picked: "
+    if(document.courses.math.checked){
+        packet = packet + ", " +document.courses.math.value
+    }
+    if(document.courses.chem.checked){
+        packet = packet + ", " +document.courses.chem.value
+    }
+    if(document.courses.phys.checked){
+        packet = packet + ", " +document.courses.phys.value
+    }
+    if(document.courses.eng.checked){
+        packet = packet + ", " +document.courses.eng.value
+    }
+    if(document.courses.pe.checked){
+        packet = packet + ", " +document.courses.pe.value
+    }
+    if(document.courses.ct.checked){
+        packet = packet + ", " +document.courses.ct.value
+    }
+    document.courses.text.value = packet
+}
+</script>
+<form name="courses">
+Name:<input type="text" name="name" placeholder="Enter your name here." ><br>
+Grade:<input type="text" name="grade" placeholder="Enter your grade."><br>
+<input type="checkbox" name="math" value="Math">Math<br>
+<input type="checkbox" name="chem" value="Chemistry">Chemistry<br>
+<input type="checkbox" name="phys" value="Physics">Physics<br>
+<input type="checkbox" name="eng" value="English">English<br>
+<input type="checkbox" name="pe" value="PE">PE<br>
+<input type="checkbox" name="ct" value="Computer Technology">Computer Technology<br>
+<input type="button" value="clickhere" onclick="courseselect()">
+<br>
+Overall what you picked:<br>
+<textarea name="text">
+</textarea>
+</form>
