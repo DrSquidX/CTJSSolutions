@@ -18,7 +18,8 @@
         }
     }
 </script>
-<form name="">
-    <input type="button" value="Even Nums 1-10" onclick="displayevennums(10)"> 
+<form name="item">
+    <input type="text" placeholder="Enter a number" value="" name="enternum">
+    <input type="button" value="Even Nums 1-(your number input on the left)" onclick="displayevennums(Number(document.item.enternum.value))"> 
     <input type="button" value="Click Me" onclick="personalizedmsg()">
 </form>
